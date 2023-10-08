@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing:content-box;
+  width: 100%;
+}
+
+.column {
+  float:left;
+  width: 24%;
+  margin-bottom:10px;
+  padding:px;
+  height:0%;
+}
+.columnp {
+  float:right;
+  margin-top: -750px;
+  width: 22%;
+  margin-bottom:10px;
+}
+
+
+
+.about-section {
+  padding: 10px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding:1px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+}
+
+.button:hover {
+  background-color: #1683d6;
+}
+
+@media screen and (max-width: 50px) {
+  .column {
+    width: 0.2%;
+    display:inline-block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us</h1>
+  <p><h3>Providing Innovative, Economical, Efficient, Reliable, Eco-friendly and Advanced Recycling Technology to the world along with Spreading Awareness about its Environmental and Economical Benefits.</h3></p>
+  <p><b>Refuse, Reduce, Reuse, Repurpose And Recycle. </b></p>
+</div>
+
+<h2 style="text-align:center">Meet Our Team !</h2>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="dibyasha.jpg" alt="Jane" style="width:90%">
+      <div class="container">
+        <h2>Dibyasha</h2>
+        <p class="title">CEO & Founder</p>
+       
+        <p>dibyasha@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="manisha.jpg" alt="Mike" style="width:75%">
+      <div class="container">
+        <h2>Manisha</h2>
+        <p class="title">Art Director</p>
+        
+        <p>Manisha@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="lipsa.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Lipsa</h2>
+        <p class="title">Creative Director</p>
+       
+        <p>lipsa@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <div class="columnp">
+    <div class="card">
+      <img src="pramod.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Pramod</h2>
+        <p class="title">Designer</p>
+       
+        <p>pramod@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
