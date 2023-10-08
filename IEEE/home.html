@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Online Kawadiwala</title>
+<style>
+/* Reset some default styles */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+  background: #336193;
+  color: #6ecddd;
+  font-family: 'Bebas';
+  text-align: center;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  text-align: center;
+  letter-spacing: 1px;
+  word-spacing: 0.15em;
+  font-size: 3em;
+  line-height: 1.2;
+  transform: translateY(52%);
+}
+
+
+#toggle {
+  display: none;
+}
+
+/**
+  Hamburger
+**/
+.hamburger {
+  position: absolute;
+  top: 5em;
+  right: 5%;
+  margin-left: -2em;
+  margin-top: -45px;
+  width: 2em;
+  height: 45px;
+  z-index: 5;
+}
+
+.hamburger div {
+  position: relative;
+  width: 3em;
+  height: 7px;
+  border-radius: 3px;
+  background-color: #f8982b;
+  margin-top: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+/**
+Nav Styles
+**/
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  color: color-mix(in lch, plum, purple);
+  top: -100%; left: 0; right: 0; bottom: 0;
+  overflow: hidden;
+  
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+
+}
+.nav-wrapper {
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+nav {
+  text-align: left;
+  margin-left: 25%;
+}
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #65d127;
+  font-size: 2em;
+  display: inline-block;
+  margin-top: 1.25em;
+  transition: color 0.2s ease-in-out;
+  letter-spacing: 1px;
+}
+nav a:before {
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 0.25em;
+  background-color: white;
+  left: -0.5em;
+  transition: all 0.2s ease-in-out;
+}
+nav a:hover {
+  color: white;
+}
+nav a:hover:before {
+  height: 100%;
+}
+
+/**
+Animations
+**/
+#toggle:checked + .hamburger .top-bun {
+  transform: rotate(-45deg);
+  margin-top: 25px;
+}
+#toggle:checked + .hamburger .bottom-bun {
+  opacity: 0;
+  transform: rotate(45deg);
+}
+#toggle:checked + .hamburger .meat {
+  transform: rotate(45deg);
+  margin-top: -7px;
+}
+
+#toggle:checked + .hamburger + .nav {
+  top: 0;
+  transform: scale(1);
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+nav{
+        padding:10px 8px;
+    }
+
+    nav ul li a:hover{
+    color: crimson;
+}
+
+
+nav ul {
+  
+    list-style: none;
+    text-align: justify;
+    font-size: 1.5rem;
+    
+}
+
+nav ul li {
+    display: inline;
+     margin-left: 5px;
+    margin-right: 105px;
+}
+
+
+nav ul li a {
+    text-decoration:no;
+    color: rgb(252, 255, 254);
+    transition: 1s linear;
+    
+}
+
+.hero {
+
+    background-image: url(backgrd.jpg); 
+    background-size: cover;
+    
+    text-align: justify;
+    
+    text-position: top;
+    padding: 400px 100px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 5px;
+    padding: 50px;
+    text-align: justify;
+     
+    color: white ;
+    font-family: "Lucida Console", "Courier New", monospace;
+   }
+
+   .little-kids {
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    z-index: 30;
+    float: right;
+    width: 175px;
+    height: 200px;
+    margin-top: -7rem;
+    background: url(	https://kids.niehs.nih.gov/sites/niehs-kids/themes…hs_kids/web-resources/images/little-kids-frog.gif) left bottom no-repeat;
+    background-size: contain;
+    transition: 250ms;
+}
+
+
+ 
+   
+
+.about {
+    background-color: black;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+#logo{
+    display: inline-block;
+   position:absolute;
+    margin:1px;
+    opacity: 10;
+
+    top: 50px;
+ 
+    left: 9px;
+    float: left;
+    height: 180px;
+    width: 180px;;
+    border-radius: 50%;
+
+}
+.h3{
+    margin-top:  10px ;
+    margin: 1px;
+    padding: 10%;
+    color: rgb(208, 235, 194);
+
+}
+
+footer {
+    background-color: rgb(121, 109, 109);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.parent{
+    position:relative;
+    width: 5%;
+    height: 5%;
+justify-content: center;
+align-items: center;
+}
+.child{
+    position: absolute;
+    width: 5%;
+    height: 5%;
+}
+</style>
+</head>
+<body>
+    
+    <header>
+
+        <nav role="navigation">
+            <div id="menuToggle">
+  
+              <span></span>
+              <span></span>
+              <span></span>
+         
+        
+<input id="toggle" type="checkbox"></input>
+
+<label for="toggle" class="hamburger">
+    <base href="">
+   
+  <div class="top-bun"></div>
+  <div class="meat"></div>
+  <div class="bottom-bun"></div>
+</label>
+
+<div class="nav">
+  <div class="nav-wrapper">
+    <nav>
+      
+       
+       <b> <a href="loginpage.html">LOG-IN</a>
+        <br>
+        <a href="register.html">REGESTER</a><br>
+     <b><a href="#">HOME</a><br>
+      <a href="about.html">ABOUT</a><br>
+      <a href="more.html">MORE</a><br>
+      <a href="#">SERVICES</a></b>
+   
+    </nav>
+  </div>
+</div>
+        </nav>
+
+    </header>
+      
+<section class="hero">
+  <!--  <div class="image"><img src="goGreen.jpg" alt=""></div>-->
+<a href="#"><img id="logo"  src="logo.jpeg" alt=""></a>
+
+        <h1>Waste Management</h1>
+    <marquee behavior="" direction="left"> <span><h2 class="h3"> For a cleaner, healthier community. </h2></span> </marquee> 
+</section>
+
+<p>Learn how reducing, reusing, and recycling can help you, your community, and the environment by saving money, energy, and natural resources. Recycling programs are managed at the state and local level—find information on recycling in your community.&nbsp;On the national level, EPA is working to build an economy that keeps materials, products, and services in circulation for as long as possible, <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="854b752d-bcd6-42f0-85f4-e4bff45b5ca5" href="/circulareconomy">what's known as a “circular economy.”</a></p>
+    <section class="about">
+    <h2> About Us </h2>
+<break>
+    <p> We are professional waste management service provider. Our aim is to help home makers by collecting their wastes and segregating them into different types of waste and recycle the products. However we also deal in business and industrial wastes.<p>
+   <p>sfwef</p>     
+	 
+    </section>
+    <p><img src="littlekid.png" alt=""></p>
+
+    <footer>
+        <p>&copy; 2023 Waste Management Service</p>
+    </footer>
+</body>
+</html>
